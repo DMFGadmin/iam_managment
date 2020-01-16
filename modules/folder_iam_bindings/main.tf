@@ -63,8 +63,5 @@ module "folder_iam_bindings" {
          "group:afrl-developers@afrldigitalmfg.org"
       ],
 
-      "roles/dataprep.project.user" = [
-         "group:afrl-developers@afrldigitalmfg.org"
-      ],
    }
 }
