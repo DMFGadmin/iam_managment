@@ -22,33 +22,5 @@ module "organization_iam_bindings" {
       "roles/bigquery.dataViewer" = [
          "group:afrl-billing-admin@afrldigitalmfg.org"
       ],
-
-      "roles/iam.serviceAccountUser" = [
-         "group:afrl-billing-admin@afrldigitalmfg.org"
-      ],
-
-      "roles/compute.viewer" = [
-         "group:afrl-billing-admin@afrldigitalmfg.org"
-      ],
-
-      "roles/logging.viewer" = [
-         "group:afrl-billing-admin@afrldigitalmfg.org"
-      ],
-
-      "roles/monitoring.admin" = [
-         "group:afrl-billing-admin@afrldigitalmfg.org"
-      ],
-
-      "roles/storage.admin" = [
-         "group:afrl-billing-admin@afrldigitalmfg.org"
-      ],
-
-      "roles/dns.reader" = [
-         "group:afrl-billing-admin@afrldigitalmfg.org"
-      ],
-
-      "roles/compute.networkViewer" = [
-         "group:afrl-billing-admin@afrldigitalmfg.org"
-      ],
    }
 }
