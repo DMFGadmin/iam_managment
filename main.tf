@@ -8,6 +8,7 @@ module "folder_iam_bindings" {
 
 module "project_iam_bindings" {
   source          = "./modules/project_iam_bindings"
+  project_id = var.project_id
 }
 
 //module "network_iam_bindings" {

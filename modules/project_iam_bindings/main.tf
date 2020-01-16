@@ -1,14 +1,8 @@
-module "project_iam_bindings" {
-   source = "terraform-google-modules/iam/google//modules/projects_iam"
-   version = "~> 3.0"
-   projects = [
-      " afrl-bd-sp-01 "
-   ]
-   mode = "additive"
-   bindings = {
+resource "google_project_iam_binding" "project" {
+  project = var.project_id
+  role    = "roles/dataprep.projects.user"
 
-      "roles/dataprep.projects.user" = [
-         "group:afrl-developers@afrldigitalmfg.org"
-      ],
-   }
+  members = [
+    "group:afrl-developers@afrldigitalmfg.org"
+  ]
 }
