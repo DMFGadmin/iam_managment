@@ -6,6 +6,10 @@ module "folder_iam_bindings" {
   source          = "./modules/folder_iam_bindings"
 }
 
+module "project_iam_bindings" {
+  source          = "./modules/project_iam_bindings"
+}
+
 //module "network_iam_bindings" {
 //  source          = "./modules/network_admin_bindings"
 //}
