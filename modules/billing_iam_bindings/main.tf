@@ -23,10 +23,6 @@ module "organization_iam_bindings" {
          "group:afrl-billing-admin@afrldigitalmfg.org"
       ],
 
-      "roles/compute.admin" = [
-         "group:afrl-billing-admin@afrldigitalmfg.org"
-      ],
-
       "roles/iam.serviceAccountUser" = [
          "group:afrl-billing-admin@afrldigitalmfg.org"
       ],
