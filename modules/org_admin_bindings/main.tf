@@ -7,7 +7,7 @@ module "organization-iam-bindings" {
     "roles/resourcemanager.organizationViewer" = [
       "group:afrl-org-admins@afrldigitalmfg.org",
       "user:admin@wbi-develops.com",
-      "afrl-developers@afrldigitalmfg.org ",
+      "group:afrl-developers@afrldigitalmfg.org ",
 
     ]
   }
