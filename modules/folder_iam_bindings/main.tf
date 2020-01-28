@@ -62,6 +62,9 @@ module "folder_iam_bindings" {
       "roles/compute.networkViewer" = [
          "group:afrl-developers@afrldigitalmfg.org"
       ],
+      "roles/container.admin" = [
+         "group:afrl-developers@afrldigitalmfg.org"
+      ],
 
    }
 }
