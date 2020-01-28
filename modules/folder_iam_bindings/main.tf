@@ -128,3 +128,11 @@ resource "google_folder_iam_binding" "dns_admin" {
    "${var.member_group_2}"
    ]
 }
+
+resource "google_folder_iam_binding" "kubernetes_admin" {
+   folder   =  var.afrl_bd_folder_id
+   role  = "roles/container.admin"
+   members = [
+   "${var.member_group_1}"
+   ]
+}
