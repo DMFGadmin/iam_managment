@@ -2,7 +2,7 @@ module "folder_iam_bindings" {
    source = "terraform-google-modules/iam/google//modules/folders_iam"
    version = "~> 3.0"
    folders = [
-      "1017394418635"
+      "${var.afrl_bd_folder_id}"
    ]
    mode = "additive"
    bindings = {
@@ -31,7 +31,7 @@ module "folder_iam_bindings" {
          "group:afrl-developers@afrldigitalmfg.org"
       ],
 
-        "roles/compute.admin" = [
+      "roles/compute.admin" = [
          "group:afrl-developers@afrldigitalmfg.org"
       ],
 
@@ -62,7 +62,7 @@ module "folder_iam_bindings" {
          "group:afrl-developers@afrldigitalmfg.org"
       ],
 
-       "roles/compute.networkAdmin" = [
+      "roles/compute.networkAdmin" = [
          "group:afrl-network-admins@afrldigitalmfg.org"
       ],
 
@@ -81,7 +81,5 @@ module "folder_iam_bindings" {
       "roles/dns.admin" = [
          "group:afrl-network-admins@afrldigitalmfg.org"
       ],
-   }
-
    }
 }

@@ -5,6 +5,7 @@
 
 module "folder_iam_bindings" {
   source          = "./modules/folder_iam_bindings"
+  afrl_bd_folder_id = var.afrl_bd_folder_id
 }
 
 module "project_iam_bindings" {

@@ -9,3 +9,7 @@ variable "billing_account_id" {
 variable "org_id" {
  description = "Organization_ID variable"
 }
+
+variable "afrl_bd_folder_id" {
+  description = "folder id for afrl bd folder"
+}
