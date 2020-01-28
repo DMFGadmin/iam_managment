@@ -1,6 +1,6 @@
 resource "google_organization_iam_binding" "billing_admin" {
    org_id   =  var.org_id
-   role  = "billing.admin"
+   role  = "roles/billing.admin"
    members = [
    "${var.billing_group_name}"
    ]
