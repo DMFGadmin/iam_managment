@@ -1,5 +1,4 @@
 variable "project_id" {
-  type = string
 }
 
 variable "billing_account_id" {
@@ -14,10 +13,14 @@ variable "afrl_bd_folder_id" {
   description = "folder id for afrl bd folder"
 }
 
-variable "member_group_1" {
-  description = "prinmary group for folder role membership"
+variable "developer_group_name" {
+  description = "g-suite group responsible for developers"
 }
 
-variable "member_group_2" {
-  description = "secondary group for folder role membership"
+variable "network_admin_group_name" {
+  description = "g-suite group responsible for network admins"
+}
+
+variable "billing_group_name" {
+ description = "g-suite group responsible for billing"
 }

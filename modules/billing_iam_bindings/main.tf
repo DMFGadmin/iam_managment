@@ -1,30 +1,31 @@
-/******************************************
-  Module billing_account_iam_binding calling
- *****************************************/
+resource "google_organization_iam_binding" "billing_admin" {
+   org_id   =  var.org_id
+   role  = "billing.admin"
+   members = [
+   "${var.billing_group_name}"
+   ]
+}
 
-module "billing-account-iam" {
-  source  = "terraform-google-modules/iam/google//modules/billing_accounts_iam"
+resource "google_organization_iam_binding" "organization_viewer" {
+   org_id   =  var.org_id
+   role  = "roles/resourcemanager.organizationViewer"
+   members = [
+   "${var.billing_group_name}"
+   ]
+}
 
-  billing_account_ids = [var.billing_account_id]
+resource "google_organization_iam_binding" "storage_object_viewer" {
+   org_id   =  var.org_id
+   role  = "roles/storage.objectViewer"
+   members = [
+   "${var.billing_group_name}"
+   ]
+}
 
-  mode = "additive"
-
-  bindings = {
-
-      "roles/billing.admin" = [
-         "group:afrl-billing-admin@afrldigitalmfg.org"
-      ],
-
-      "roles/resourcemanager.organizationViewer" = [
-         "group:afrl-billing-admin@afrldigitalmfg.org"
-      ],
-
-      "roles/storage.objectViewer" = [
-         "group:afrl-billing-admin@afrldigitalmfg.org"
-      ],
-
-      "roles/bigquery.dataViewer" = [
-         "group:afrl-billing-admin@afrldigitalmfg.org"
-      ],
-   }
+resource "google_organization_iam_binding" "big_query_data_viewer" {
+   org_id   =  var.org_id
+   role  = "roles/bigquery.dataViewer"
+   members = [
+   "${var.billing_group_name}"
+   ]
 }

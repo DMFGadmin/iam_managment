@@ -1,13 +1,14 @@
-//module "billing_iam_bindings" {
-//  source          = "./modules/billing_iam_bindings"
-//  billing_account_id = var.billing_account_id
-//}
+module "billing_iam_bindings" {
+  source          = "./modules/billing_iam_bindings"
+  org_id = var.org_id
+  billing_group_name = var.billing_group_name
+}
 
 module "folder_iam_bindings" {
   source          = "./modules/folder_iam_bindings"
   afrl_bd_folder_id = var.afrl_bd_folder_id
-  member_group_1 = var.member_group_1
-  member_group_2 = var.member_group_2
+  developer_group_name = var.developer_group_name
+  network_admin_group_name = var.network_admin_group_name
 }
 
 module "project_iam_bindings" {

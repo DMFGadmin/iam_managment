@@ -2,10 +2,10 @@ variable "afrl_bd_folder_id" {
   description = "folder id for afrl bd folder"
 }
 
-variable "member_group_1" {
+variable "developer_group_name" {
 
 }
 
-variable "member_group_2" {
+variable "network_admin_group_name" {
 
 }

@@ -1,3 +1,7 @@
-variable "billing_account_id" {
- description = "Billing Account ID to apply IAM bindings"
+variable "org_id" {
+ description = "which org to assign policies?"
+}
+
+variable "billing_group_name" {
+ description = "g-suite group responsible for billing"
 }
