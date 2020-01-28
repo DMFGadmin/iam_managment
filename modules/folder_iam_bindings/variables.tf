@@ -3,9 +3,5 @@ variable "afrl_bd_folder_id" {
 }
 
 variable "developer_group_name" {
-
-}
-
-variable "network_admin_group_name" {
-
+  description = "g-suite group responsible for developers"
 }
