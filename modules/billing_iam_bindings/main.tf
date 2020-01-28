@@ -1,11 +1,15 @@
-module "organization_iam_bindings" {
-   source = "terraform-google-modules/iam/google//modules/organizations_iam"
-   version = "~> 3.0"
-   organizations = [
-      "568391452614"
-   ]
-   mode = "additive"
-   bindings = {
+/******************************************
+  Module billing_account_iam_binding calling
+ *****************************************/
+
+module "billing-account-iam" {
+  source = "../../modules/billing_accounts_iam/"
+
+  billing_account_ids = [var.billing_account_id]
+
+  mode = "additive"
+
+  bindings = {
 
       "roles/billing.admin" = [
          "group:afrl-billing-admin@afrldigitalmfg.org"
