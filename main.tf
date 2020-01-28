@@ -8,7 +8,6 @@ module "folder_iam_bindings" {
   source          = "./modules/folder_iam_bindings"
   afrl_bd_folder_id = var.afrl_bd_folder_id
   developer_group_name = var.developer_group_name
-  network_admin_group_name = var.network_admin_group_name
 }
 
 module "project_iam_bindings" {
@@ -16,9 +15,11 @@ module "project_iam_bindings" {
   project_id = var.project_id
 }
 
-//module "network_iam_bindings" {
-//  source          = "./modules/network_admin_bindings"
-//}
+module "network_iam_bindings" {
+  source          = "./modules/network_admin_bindings"
+  afrl_bd_folder_id = var.afrl_bd_folder_id
+  network_admin_group_name = var.network_admin_group_name
+}
 
 //module "security_iam_bindings" {
 //  source          = "./modules/security_admin_bindings"
