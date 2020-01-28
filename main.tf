@@ -28,4 +28,6 @@ module "network_iam_bindings" {
 module "org_iam_bindings" {
   source          = "./modules/org_admin_bindings"
   org_id          = var.org_id
+  org_admins_group_name = var.org_admins_group_name
+  developer_group_name = var.developer_group_name
 }
