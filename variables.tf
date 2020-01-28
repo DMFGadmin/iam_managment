@@ -24,3 +24,7 @@ variable "network_admin_group_name" {
 variable "billing_group_name" {
  description = "g-suite group responsible for billing"
 }
+
+variable "org_admins_group_name" {
+ description = "g-suite group responsible for org administration"
+}

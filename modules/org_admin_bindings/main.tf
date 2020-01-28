@@ -1,14 +1,16 @@
-module "organization-iam-bindings" {
-  source        = "terraform-google-modules/iam/google//modules/organizations_iam"
-  organizations = ["${var.org_id}"]
-  mode          = "additive"
+resource "google_organization_iam_binding" "organization_viewer" {
+   org_id   =  var.org_id
+   role  = "rresourcemanager.organizationViewer"
+   members = [
+   "${var.org_admins_group_name}",
+     "${var.developer_group_name}"
+   ]
+}
 
-  bindings = {
-    "roles/resourcemanager.organizationViewer" = [
-      "group:afrl-org-admins@afrldigitalmfg.org",
-      "user:admin@wbi-develops.com",
-      "group:afrl-developers@afrldigitalmfg.org",
-
-    ]
-  }
+resource "google_organization_iam_binding" "organization_admin" {
+   org_id   =  var.org_id
+   role  = "rresourcemanager.organizationAdmin"
+   members = [
+   "${var.org_admins_group_name}"
+   ]
 }
