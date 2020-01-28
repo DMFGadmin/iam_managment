@@ -3,7 +3,7 @@
  *****************************************/
 
 module "billing-account-iam" {
-  source = "../../modules/billing_accounts_iam/"
+  source  = "terraform-google-modules/iam/google//modules/billing_accounts_iam"
 
   billing_account_ids = [var.billing_account_id]
 

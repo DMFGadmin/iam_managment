@@ -1,5 +1,6 @@
 module "billing_iam_bindings" {
   source          = "./modules/billing_iam_bindings"
+  billing_account_id = var.billing_account_id
 }
 
 module "folder_iam_bindings" {
