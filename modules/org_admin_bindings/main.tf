@@ -10,9 +10,5 @@ module "organization-iam-bindings" {
       "afrl-developers@afrldigitalmfg.org ",
 
     ]
-    "roles/resourcemanager.organziationAdministrator" = [
-      "group:afrl-org-admins@afrldigitalmfg.org ",
-      "user:joel.cote@mavenwave.com"
-    ]
   }
 }
