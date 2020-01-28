@@ -6,7 +6,8 @@
 module "folder_iam_bindings" {
   source          = "./modules/folder_iam_bindings"
   afrl_bd_folder_id = var.afrl_bd_folder_id
-  members = var.members
+  member_group_1 = var.member_group_1
+  member_group_2 = var.member_group_2
 }
 
 module "project_iam_bindings" {
