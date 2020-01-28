@@ -20,6 +20,7 @@ module "project_iam_bindings" {
 //  source          = "./modules/security_admin_bindings"
 //}
 
-//module "org_iam_bindings" {
-//  source          = "./modules/network_admin_bindings"
-//}
+module "org_iam_bindings" {
+  source          = "./modules/org_admin_bindings"
+  org_id          = var.org_id
+}
